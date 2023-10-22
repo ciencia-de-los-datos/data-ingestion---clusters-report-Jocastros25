@@ -47,21 +47,3 @@ def ingest_data():
             df.loc[index, 'principales_palabras_clave'] = element[:-1]
 
     return df
-
-
-
-
-df = pd.read_fwf('clusters_report.txt', 
-                            widths=[7,16,16,80], 
-                            names =['Cluster', 'Cantidad de palabras clave', 'Porcentaje de palabras clave', 'Principales palabras clave'], 
-                            skiprows = [0,1,2,3],
-                            skip_footer     = True,
-                            keep_default_na = False,
-                            na_filter = True,
-                            verbose  = True,
-                            warn_bad_lines  = False,
-                            )
-
-#print(df["Principales palabras clave"].head())
-# Imprime el DataFrame resultante
-#print(df)
